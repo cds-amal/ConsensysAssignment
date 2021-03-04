@@ -31,7 +31,7 @@ contract('Add owner', (accounts) => {
     await catchRevert(instance.addStateOwner(initialOwner));
   });
 
-  it('Adds the owner and is retrievable', async () => {
+  it.only('Adds the owner and is retrievable', async () => {
     
     await createOwner(instance, accounts);
     let owners = await instance.getOwners();
