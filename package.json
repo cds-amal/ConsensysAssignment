@@ -1,6 +1,15 @@
 {
   "scripts": {
-    "dev": "lite-server -c configs/bs-config.json"
+    "dev": "lite-server -c configs/bs-config.json",
+    "ganache": "./scripts/start-ganache.zsh",
+    "txns": "node scripts/txns.js | grep -iv done",
+    "seq": "node ~/work/truffle/packages/core/cli.js run tx2seq --short-participant-names",
+    "seql": "node ~/work/truffle/packages/core/cli.js run tx2seq",
+    "seq:d": "node --inspect-brk ~/work/truffle/packages/core/cli.js run tx2seq",
+    "umls": "./scripts/make-umls",
+    "bn": "./scripts/bn.awk",
+    "md": "./scripts/md.zsh",
+    "check:node": "node ./scripts/check-node.js"
   },
   "directories": {
     "doc": "docs",
